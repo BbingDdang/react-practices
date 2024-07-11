@@ -11,6 +11,7 @@ function Contents(props) {
             */
             className='Clock'
             title='시계'>
+            {`//comment04: JSX 안에서 javascript 주석 구문(/**/ 포함)을 사용하면 그대로 출력된다.`}
             <p>ex07: Comment</p>
             <div>00:00:00AM</div>
         </div>
