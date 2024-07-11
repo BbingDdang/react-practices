@@ -1,11 +1,15 @@
 import React from 'react';
+import Header from './Header';
+import Contents from './Contents';
 function App() {
-    return (
-        <div>
-            <h1>Ex03</h1>
-            <p>함수 컴포넌트</p>
-        </div>
-    );
+    // return (
+    //     <div>
+    //         <Header />
+    //         <Contents />
+    //     </div>
+    // );
+
+    return React.createElement('div', {id: 'App'}, React.createElement(Header, null), React.createElement(Contents, null));
 }
 
 export {App};
