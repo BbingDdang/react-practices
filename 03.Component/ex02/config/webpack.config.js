@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = function(env) {
     return {
         mode: "none",
-        entry: path.resolve(`src/index.js`),
+        entry: path.resolve(`src/${env.src}/index.js`),
         output: {
             path: path.resolve('public'),
             filename: 'assets/js/main.js',
