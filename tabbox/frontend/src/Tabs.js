@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import TabItem from './TabItem';
+import tabs from './assets/json/data';
 
-function Tabs({tabs}) {
+function Tabs() {
     const [activeIndex, setActiveIndex] = useState(null);
 
     const handleClick = (index) => {
