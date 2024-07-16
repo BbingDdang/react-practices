@@ -1,6 +1,6 @@
 import React from 'react';
 
-function TabItem({name, active, onclick}) {
+function TabItem({no, name, active, onclick}) {
 
     return (
         <li onClick={onclick} className={active ? 'active' : ''}>{name}</li>
