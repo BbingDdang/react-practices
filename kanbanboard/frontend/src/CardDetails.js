@@ -1,12 +1,11 @@
 import React from 'react';
 import TaskList from './TaskList';
-import * as styles from './assets/css/KanbanBoard.css';
 
-function CardDetails(props) {
+function CardDetails({description, card}) {
     return (
         <div className='Card_Details'>
-            CardDetailsContents
-            <TaskList />
+            {description}
+            <TaskList tasks={card.tasks}/>
         </div>
     );
 }

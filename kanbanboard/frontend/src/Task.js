@@ -1,12 +1,15 @@
-import React from 'react';
-import * as styles from './assets/css/KanbanBoard.css';
+import React, { useState } from 'react';
+import {_Task, Task_Remove} from './assets/scss/Task.scss'
+import './assets/scss/Task.scss';
 
-function Task(props) {
+function Task({task}) {
+    const [check, setCheck] = useState(false)
+
     return (
-        <li className={styles._Task}>
-            <input type='checkbox' checked={true} onChange={() => {}}/>
-            내용 
-            <a href='#' className='Task_Remove'></a>
+        <li className={_Task}>
+            <input type='checkbox' checked={check} onChange={() => {setCheck(!check)}}/>
+            {task.name}
+            <a href='#' className={Task_Remove}></a>
         </li>
     );
 }

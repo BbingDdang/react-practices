@@ -1,14 +1,17 @@
 import React from 'react';
 import Task from './Task';
-import * as styles from './assets/css/KanbanBoard.css';
+import {Task_List, Input_Add_Task} from './assets/scss/TaskList.scss'
+import './assets/scss/TaskList.scss';
 
-function TaskList(props) {
+function TaskList({tasks}) {
     return (
-        <div className={styles.Task_List}>
+        <div className={Task_List}>
             <ul>
-                <Task />
+                {tasks.map(task => (
+                    <Task key={task.no} task={task}/>
+                ))}
             </ul>
-            <input className={styles.Input_Add_Task} type='text' placeholder='테스크 추가' />
+            <input className={Input_Add_Task} type='text' placeholder='테스크 추가' />
         </div>
     );
 }

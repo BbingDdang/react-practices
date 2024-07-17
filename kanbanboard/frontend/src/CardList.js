@@ -1,13 +1,17 @@
 import React from 'react';
 import Card from './Card';
-import * as styles from './assets/css/KanbanBoard.css';
+import {Card_List} from './assets/scss/CardList.scss'
+import './assets/scss/CardList.scss';
 
+function CardList({title, cards}) {
 
-function CardList(props) {
     return (
-        <div className={styles.Card_List}>
-            <h1>CardListName</h1>
-            <Card />
+        <div className={Card_List}>
+            <h1>{title}</h1>
+            {cards.map(card => (
+                <Card key={card.no} card ={card}/>
+            ))}
+            
         </div>
     );
 }
