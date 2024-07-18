@@ -7,6 +7,7 @@ function Email({name, email}) {
             {name}
             <br/>
             {email}
+            <a href='#' />
         </li>
     );
 }

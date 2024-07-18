@@ -35,9 +35,13 @@
             content:'X'
         }
 
-        &:hover, &:visited, &:active {
+        &:visited, &:active {
             text-decoration: none;
             color: #fff;
+        }
+
+        &:hover {
+            background-color: red;
         }
     }
 }

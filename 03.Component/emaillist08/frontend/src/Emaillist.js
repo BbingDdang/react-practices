@@ -3,7 +3,7 @@ import Email from './Email';
 import {Email_list} from './assets/scss/Emaillist.scss'
 
 
-function Emaillist() {
+function Emaillist(emails) {
     const elist = [
         {name: "둘리", email: "dooly@gmail.com"},
         {name: "마이콜", email: "michol@gmail.com"},
