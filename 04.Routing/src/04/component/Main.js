@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function Main() {
     return (
@@ -8,13 +8,13 @@ export default function Main() {
             {
                 <ul>
                     <li>
-                        <Link to={'/'}>[Main]</Link>
+                        <NavLink to={'/'}>[Main]</NavLink>
                     </li>
                     <li>     
-                        <Link to={'/guestbook'}>[Guestbook]</Link> 
+                        <NavLink to={'/guestbook'}>[Guestbook]</NavLink> 
                     </li>
                     <li>    
-                        <Link to={'/gallery'}>[Gallery]</Link> 
+                        <NavLink to={'/gallery'}>[Gallery]</NavLink> 
                     </li>
                 </ul>
         }
