@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router';
 import * as styles from '../../assets/scss/component/About.scss';
 
 export default function About() {

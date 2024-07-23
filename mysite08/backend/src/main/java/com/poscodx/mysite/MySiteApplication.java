@@ -13,6 +13,7 @@ public class MySiteApplication {
 		SpringApplication.run(MySiteApplication.class, args);
 	}
 
+	// Comment by Kickscar
 	@Bean
 	public TomcatServletWebServerFactory servletContainer() {
 		return new TomcatServletWebServerFactory() {

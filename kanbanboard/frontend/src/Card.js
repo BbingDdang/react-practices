@@ -15,7 +15,8 @@ function Card({card}) {
         return (
             <div className={_Card}>
                 <div className={Card_Title + " " + Card_Title_Open} onClick={onHandle}>{card.title}</div>
-                <CardDetails description={card.description} card = {card}/>
+                {card.description}
+                <CardDetails card = {card}/>
             </div>
         );
     }
@@ -23,6 +24,7 @@ function Card({card}) {
         return (
             <div className={_Card}>
                 <div className={Card_Title} onClick={onHandle}>{card.title}</div>
+                {card.description}
             </div>
         );
     }

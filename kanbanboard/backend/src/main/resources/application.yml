@@ -38,7 +38,7 @@ spring:
       path: /h2-console      
 
 mybatis:
-   config-location: classpath:mybatis/configuration.xml      
+   config-location: classpath:mybatis/configuration.xml
 
 server:
    error:

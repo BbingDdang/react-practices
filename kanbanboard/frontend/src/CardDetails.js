@@ -1,10 +1,10 @@
 import React from 'react';
 import TaskList from './TaskList';
 
-function CardDetails({description, card}) {
+function CardDetails({card}) {
     return (
+        
         <div className='Card_Details'>
-            {description}
             <TaskList tasks={card.tasks}/>
         </div>
     );
