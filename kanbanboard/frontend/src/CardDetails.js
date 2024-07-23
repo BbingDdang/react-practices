@@ -5,6 +5,7 @@ function CardDetails({card}) {
     return (
         
         <div className='Card_Details'>
+            
             <TaskList tasks={card.tasks}/>
         </div>
     );
