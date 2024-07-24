@@ -1,12 +1,17 @@
 import React from 'react';
 import TaskList from './TaskList';
 
-function CardDetails({card}) {
+function CardDetails({card, tasks, addTask, updateTask, deleteTask}) {
     return (
         
         <div className='Card_Details'>
             
-            <TaskList tasks={card.tasks}/>
+            <TaskList 
+            card = {card}
+            tasks={tasks} 
+            addTask ={addTask} 
+            updateTask = {updateTask} 
+            deleteTask = {deleteTask}/>
         </div>
     );
 }

@@ -22,11 +22,13 @@ public class TaskRepository {
         return sqlSession.insert("task.insert", vo);
     }
 
-    public int updateTask(TaskVo vo) {
-        return sqlSession.update("task.update", vo);
+    public int updateTask(Long no) {
+        System.out.println(sqlSession.update("task.updateCheck", no));
+
+        return sqlSession.update("task.updateCheck", no);
     }
 
     public int deleteTask(Long no) {
-        return sqlSession.delete("task.delete", no);
+        return sqlSession.delete("task.deleteByNo", no);
     }
 }

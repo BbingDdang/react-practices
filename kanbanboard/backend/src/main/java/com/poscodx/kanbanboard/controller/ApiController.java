@@ -22,7 +22,7 @@ public class ApiController {
     @Autowired
     private TaskRepository taskRepository;
 
-    @GetMapping("/card")
+    @GetMapping("")
     public ResponseEntity<JsonResult> read() {
         log.info("Request[GET /api]");
         return ResponseEntity
@@ -47,12 +47,14 @@ public class ApiController {
 
     @PutMapping("/task")
     public ResponseEntity<JsonResult> updateTask(@RequestBody TaskVo vo) {
+        System.out.println(vo.getNo());
         log.info("Request[PUT /api]");
-        taskRepository.updateTask(vo);
+        taskRepository.updateTask(vo.getNo());
         return ResponseEntity.status(HttpStatus.OK).body(JsonResult.success(vo));
     }
     @DeleteMapping("/task")
-    public ResponseEntity<JsonResult> deleteTask(@RequestBody Long no) {
+    public ResponseEntity<JsonResult> deleteTask(@RequestParam Long no) {
+
         log.info("Request[DELETE /api]");
         taskRepository.deleteTask(no);
         return ResponseEntity.status(HttpStatus.OK).body(JsonResult.success(no));

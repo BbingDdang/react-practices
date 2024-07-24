@@ -6,6 +6,6 @@ import lombok.Data;
 public class TaskVo {
     private Long no;
     private String name;
-    private boolean done;
+    private String done;
     private Long cardNo;
 }

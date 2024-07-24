@@ -14,7 +14,7 @@ public class CardRepository {
     private SqlSession sqlSession;
 
     public List<CardVo> findAll() {
-        return sqlSession.selectList("card.findAll");
+        return sqlSession.selectList("card.findall");
     }
 
     public int insert(CardVo vo){

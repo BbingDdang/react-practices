@@ -6,8 +6,8 @@
     <insert id="insert" parameterType="taskvo">
         <![CDATA[
 		insert
-			into post (no, name, done, card_no)
-			values(null, #{name}, #{done}, #{cardNo})
+			into task (no, name, done, card_no)
+			values(null, #{name}, 'N', #{cardNo})
 		]]>
         <selectKey keyProperty="no" resultType="long" order="AFTER">
             <![CDATA[
@@ -26,7 +26,7 @@
     <update id="updateCheck" parameterType="long">
         <![CDATA[
             update task
-            set done = #{done}
+            set done = case when done = 'Y' then 'N' else 'Y' end
             where no = #{no}
         ]]>
     </update>
