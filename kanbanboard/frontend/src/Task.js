@@ -3,7 +3,7 @@ import {_Task, Task_Remove} from './assets/scss/Task.scss'
 import './assets/scss/Task.scss';
 
 function Task({card, task, updateTask, deleteTask}) {
-    const [check, setCheck] = useState(false)
+    const [check, setCheck] = useState(task.done == 'Y' ? true : false)
     console.log(task.no);
 
     return (
